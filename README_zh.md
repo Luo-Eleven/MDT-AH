@@ -1,4 +1,4 @@
-# MDT-AH — 模态差异Transformer：面向矛盾与犹豫识别的多模态融合
+# MDT-AH — 面向矛盾与犹豫识别的模态差异Transformer
 
 <div align="center">
 
@@ -168,7 +168,7 @@ python scripts/predict.py \
 
 ## 模型架构
 
-MDT 采用 9-token 差异表示：三个模态嵌入（v, a, t）加上六个差异特征——三个绝对差（|v−a|, |v−t|, |a−t|）和三个 Hadamard 积（W(v⊙a), W(v⊙t), W(a⊙t)），通过可学习的线性投影计算。一个 2 层 Transformer 对这些 token 进行自注意力计算，随后通过 MLP 分类器输出结果。FiLM 调制使视频和音频以文本为条件进行调制，推理时将仅文本辅助头与完整多模态输出进行融合。
+MDT 采用 9-token 差异表示：三个模态嵌入 $(v, a, t)$ 加上六个差异特征——三个绝对差 $(|v-a|, |v-t|, |a-t|)$ 和三个 Hadamard 积 $(W(v \odot a), W(v \odot t), W(a \odot t))$，通过可学习的线性投影计算。一个 2 层 Transformer 对这些 token 进行自注意力计算，随后通过 MLP 分类器输出结果。FiLM 调制使视频和音频以文本为条件进行调制，推理时将仅文本辅助头与完整多模态输出进行融合。
 
 - **编码器**：VideoMAE-Base, HuBERT-Base, RoBERTa-GoEmotions（冻结 + LoRA 微调）
 - **FiLM**：基于文本条件的 Feature-wise Linear Modulation，在差异计算前调制视频/音频

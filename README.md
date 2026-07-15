@@ -168,7 +168,7 @@ python scripts/predict.py \
 
 ## Architecture
 
-MDT uses a 9-token discrepancy representation: three modality embeddings (v, a, t) plus six discrepancy features — three absolute-difference (|v−a|, |v−t|, |a−t|) and three Hadamard-product (W(v⊙a), W(v⊙t), W(a⊙t)) via learned projections. A 2-layer Transformer attends over these tokens, followed by an MLP classifier. FiLM modulation conditions video/audio on text, and a text-only auxiliary head is blended with the full multimodal output at inference.
+MDT uses a 9-token discrepancy representation: three modality embeddings $(v, a, t)$ plus six discrepancy features — three absolute-difference $(|v-a|, |v-t|, |a-t|)$ and three Hadamard-product $(W(v \odot a), W(v \odot t), W(a \odot t))$ via learned projections. A 2-layer Transformer attends over these tokens, followed by an MLP classifier. FiLM modulation conditions video/audio on text, and a text-only auxiliary head is blended with the full multimodal output at inference.
 
 - **Encoders**: VideoMAE-Base, HuBERT-Base, RoBERTa-GoEmotions (frozen, LoRA-tuned)
 - **FiLM**: Text-conditioned Feature-wise Linear Modulation on video/audio before discrepancy computation
