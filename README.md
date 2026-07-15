@@ -1,5 +1,7 @@
 # MDT-AH — Modality Discrepancy Transformer for Ambivalence and Hesitancy Recognition
 
+[中文文档](./README_zh.md)
+
 **11th ABAW Competition: MTL Challenge Team Registration**
 
 **Team Name:** CASIA-26
