@@ -1,8 +1,12 @@
 # MDT-AH — 模态差异Transformer：面向矛盾与犹豫识别的多模态融合
 
-[English](./README.md)
+<div align="center">
 
-**第11届 ABAW 竞赛：MTL 挑战赛 团队注册**
+[![English](https://img.shields.io/badge/English-README-blue?style=flat-square)](./README.md)
+
+</div>
+
+**第11届 ABAW 竞赛**
 
 **团队名称：** CASIA-26
 
